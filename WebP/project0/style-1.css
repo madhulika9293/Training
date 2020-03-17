@@ -1,0 +1,61 @@
+.imagecl {
+  padding-left: 100px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.h1cl {
+  padding-top: 20px;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+.h2cl {
+  text-align: center;
+  padding-top: 20px;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.responsive1 {
+  max-width: 100%;
+  height: auto;
+}
+
+.bordercl {
+  border: 2px solid black;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.mypointscl {
+  font-size: 20px;
+  font-style: italic;
+  font-family: "Courier New", "Times New Roman", Times, serif;
+  color: black;
+}
+
+.cardsize {
+  height: 300px;
+  width: 600px;
+  background-color: lightcyan;
+  box-shadow: 10px 10px grey;
+  margin-bottom: 10px;
+}
+
+.textcl {
+  color: rgb(166, 135, 222);
+}
+
+.textsize {
+  font-size: 20px;
+}
+
+a > li {
+  margin-right: 25px;
+}
