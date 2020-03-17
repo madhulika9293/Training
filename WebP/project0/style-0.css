@@ -1,0 +1,19 @@
+.pr, .pc {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+.pc {
+  background-color: green;
+}
+
+.pr {
+  background-color: orange;
+}
+
+/*# sourceMappingURL=style-0.css.map */

@@ -1,10 +1,152 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Webpage</title>
-    </head>
+        <title> MSIT So Far </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href = "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel = "stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link href = "style-1.css" rel = "stylesheet">   
+        <style>
+            body {
+                background-color: whitesmoke;
+            }
+            
+            div.ex1 {
+                overflow: scroll;
+            }
+
+            @media (max-width: 499px) {
+                .h1cl {
+                    color: black;
+                }
+            }
+
+            @media (min-width: 500px) {
+                .h1cl {
+                    color: goldenrod;
+                }
+            }
+
+            
+        </style>     
+        </head>
+
     <body>
-        Hello, you are in the first page!
-        <a href="index.html">Go to Home!!</a>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Navbar</a>
+          </nav>
+        <div class = "container-fluid" style = "border: 1px solid black">
+            <div class = "row">
+                <div class = "col-md-3">
+                    <div class = "container imagecl bordercl">
+                    <img src = "Images/boy.jpg" width = "50%" style = "border: 2px solid black" alt = "Personal Photo" class = "responsive">
+                    <h1 class = "h1cl"> Tulasi Jagan </h1>
+                    </div>
+                    <div class = "container bordercl">
+                        <ul class = "mypointscl">
+                            <li> Crazy Person from Vijayawada</li>
+                            <li> Studying MSIT</li>
+                            <li> Completed B.Tech from Mechanical Engineering</li>
+                            <li> Final Year Project on Solar PV Panels</li>
+                            <li> Internships at Steel Plant Vizag and NFC Hyderabad </li>
+                            <li> Presently learning Web-Prgogramming</li> 
+                            <li> About the courses so far finished here at MSIT refer to the right side of the page. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class = "col-md-9">
+                    <div class = "container">
+                        <h1 class = "h2cl"> My Journey So Far...<h1>
+                        <hr>
+                        <div class="card-deck mt-4">
+                                <div class="card ex1 cardsize">
+                                  <div class="card-body textcl">
+                                        <img class="card-img-top responsive1" height = 100px width = 200px src="Images/cspp.jpg" alt="Card image">
+                                        <!-- <div class = "bottom-right"> CSPP </div> -->
+                                        <h3> CSPP </h3>
+                                        <ul class = "textsize"> 
+                                            <li>At first it was bit amazing, but the daily routine bored me.</li>
+                                            <li>The OOPS in python might have been given more concerntration.</li>
+                                            <li>The instructors efforts to see us through.</li>
+                                            </ul>
+                                  </div>
+                                </div>
+                                <div class="card cardsize ex1">
+                                  <div class="card-body textcl">
+                                        <img class="card-img-top responsive1" height = 100px width = 200px src="Images/dsa.png" alt="Card image">
+                                        <h3> ADS </h3>
+                                        <ul class = "textsize"> 
+                                                <li>I enjoyed the codecamps and the exam questions.</li>
+                                                <li>The depth of topics dealt with.</li>
+                                                <li>The instructors efforts to see us through and it was not that tough as before mentioned.</li>
+                                                </ul>
+                                  </div>
+                                </div>
+                                <div class="card cardsize ex1">
+                                  <div class="card-body textcl">
+                                        <img class="card-img-top responsive1" height = 100px width = 200px src="Images/dbms.png" alt="Card image">
+                                        <h3> DBMS </h3>
+                                        <ul class = "textsize"> 
+                                                <li>Using those postgres.</li>
+                                                <li>Nothing.</li>
+                                                <li>None :)</li>
+                                        </ul>
+                                  </div>
+                                </div>   
+                         </div>
+
+                         
+                         
+                         <div class = "card-deck mt-4">
+                                <div class="card cardsize ex1">
+                                        <div class="card-body textcl">
+                                          <img class="card-img-top responsive1" height = 100px width = 200px src="Images/ics.jpg" alt="Card image">
+                                          <h3> ICS </h3>
+                                          
+                                          <ul class = "textsize"> 
+                                                <li>Yet to be completed.</li>
+                                                <li>Will talk/write about it later.</li>
+                                                <li>None :)</li>
+                                                </ul>
+                                        </div>
+                                      </div>  
+                                      <div class="card cardsize ex1">
+                                              <div class="card-body textcl">
+                                                <img class="card-img-top responsive1" height = 100px width = 200px src="Images/cnf.jpg" alt="Card image">
+                                                <h3> CNF </h3>
+                                                <ul class = "textsize"> 
+                                                        <li>The socket programming.</li>
+                                                        <li>Nothing.</li>
+                                                        <li>None :)</li>
+                                                        </ul>
+                                              </div>
+                                      </div> 
+                                      <div class="card cardsize ex1">
+                                              <div class="card-body textcl">
+                                                <img class="card-img-top responsive1" height = 100px width = 200px src="Images/Cybersecurity.png" alt="Card image">
+                                                <h3> CS </h3>
+                                                <ul class = "textsize"> 
+                                                        <li>Preparing the poster for presentation.</li>
+                                                        <li>There can be modifications in course curriculum.</li>
+                                                        <li>None :)</li>
+                                                        </ul>
+                                              </div>
+                                            </div>   
+                         </div>
+                        
+                         <div>
+                        <hr>
+                         <p><strong> For more information about progress in MSIT, <a href = "https://github.com/TulasiJagan49">click</a> </strong></p>
+                         <table>
+                            <tr>
+                                <th><a href="index.html"><li> Home </li></a></th>
+                                <th><a href="second.html"><li> Madhulika </li></a></th>
+                                <th><a href="third.html"><li> SivaShankar </li></a></th>
+                            </tr>
+                        </table>
+                         <div>
+
+            </div> 
+        </div>
     </body>
-</html>
+</html> 
