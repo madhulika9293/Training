@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Page</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron jumbotron-fluid">
+          <h1 class="text-center">REGISTER HERE!</h1>
+        </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm-3">
+        </div>
+        <div class="col-sm-6">
+          <form action="/register" method="POST">
+            <div class="form-group">
+              <label for="user">First Name</label>
+              <input type="text" class="form-control" id="user" name="user" placeholder="Enter Name Without Spaces">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>            
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+            </div>
+            <input type="submit" class="btn btn-primary" name="submit">
+          </form>
+        </div>
+        <div class="col-sm-3">
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
