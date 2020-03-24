@@ -32,7 +32,7 @@ def register():
 		name = request.form.get("user").capitalize()
 		email = request.form.get("email")
 		password = request.form.get("password")
-		print(name + ", "+ password)
+		print(name + ", "+ email + ", " + password)
 		return render_template("index.html",name=name)
 	return render_template("registration.html")
 
