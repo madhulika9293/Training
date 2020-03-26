@@ -42,11 +42,11 @@ def index():
 @app.route("/register", methods=["GET","POST"])
 def register():
 	if (request.method == "POST"):
-		name = request.form.get("user").capitalize()
+		fname = request.form.get("user").capitalize()
 		email = request.form.get("email")
 		password = request.form.get("password")
-		# print(name + ", "+ email + ", " + password)
-		if not name:
+		# print(fname + ", "+ email + ", " + password)
+		if not fname:
 			return render_template("error.html",message="Please provide username")
 		elif not email:
 			return render_template("error.html",message="Please provide email")
@@ -54,10 +54,16 @@ def register():
 			return render_template("error.html",message="Please provide password")
 		else:
 			dt = datetime.datetime.now()
-			user = User(fname=name,email=email,password=password,timestamp=dt)
+			user = User(fname=fname,email=email,password=password,timestamp=dt)
 			db.session.add(user)
 			db.session.commit()
-			return render_template("index.html",name=name) # index page with username if successful, for now
+			return render_template("index.html",name=fname) # index page with username if successful, for now
 	return render_template("registration.html")
 
+@app.route("/admin",methods=["GET"])
+def admin():
+	allusers = User.query.all()
+	for user in allusers:
+		print(user.fname+" "+user.password+" "+str(user.timestamp))
+	return render_template("admin.html",allusers=allusers)
 
