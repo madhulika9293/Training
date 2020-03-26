@@ -47,6 +47,9 @@ def register():
 		password = request.form.get("password")
 		print(name + ", "+ email + ", " + password)
 		dt = datetime.datetime.now()
+		user = User(fname=name,email=email,password=password,timestamp=dt)
+		db.session.add(user)
+		db.session.commit()
 		return render_template("index.html",name=name)
 	return render_template("registration.html")
 
