@@ -45,12 +45,19 @@ def register():
 		name = request.form.get("user").capitalize()
 		email = request.form.get("email")
 		password = request.form.get("password")
-		print(name + ", "+ email + ", " + password)
-		dt = datetime.datetime.now()
-		user = User(fname=name,email=email,password=password,timestamp=dt)
-		db.session.add(user)
-		db.session.commit()
-		return render_template("index.html",name=name)
+		# print(name + ", "+ email + ", " + password)
+		if not name:
+			return render_template("error.html",message="Please provide username")
+		elif not email:
+			return render_template("error.html",message="Please provide email")
+		elif not password:
+			return render_template("error.html",message="Please provide password")
+		else:
+			dt = datetime.datetime.now()
+			user = User(fname=name,email=email,password=password,timestamp=dt)
+			db.session.add(user)
+			db.session.commit()
+			return render_template("index.html",name=name) # index page with username if successful, for now
 	return render_template("registration.html")
 
 
