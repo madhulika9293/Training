@@ -58,10 +58,14 @@ def register():
 			return render_template("error.html",message="Please provide password")
 		else:
 			dt = datetime.datetime.now()
-			user = User(fname=fname,email=email,password=password,timestamp=dt)
-			db.session.add(user)
-			db.session.commit()
-			return render_template("index.html",name=fname) # index page with username if successful, for now
+			userVerify = User.query.filter_by(email=email)
+			if userVerify:
+				return render_template("error.html",message="You are already registered!")
+			else:
+				user = User(fname=fname,email=email,password=password,timestamp=dt)
+				db.session.add(user)
+				db.session.commit()
+				return render_template("index.html",name=fname) # index page with username if successful, for now
 	return render_template("registration.html")
 
 @app.route("/admin",methods=["GET"])
