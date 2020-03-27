@@ -1,5 +1,6 @@
 import os
 import datetime
+import logging
 
 from flask import Flask, session, render_template, request
 from flask_session import Session
@@ -9,6 +10,9 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
 app = Flask(__name__)
+
+#Setup logging
+logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
 # Check for environment variable
 if not os.getenv("DATABASE_URL"):
@@ -45,7 +49,7 @@ def register():
 		fname = request.form.get("user").capitalize()
 		email = request.form.get("email")
 		password = request.form.get("password")
-		# print(fname + ", "+ email + ", " + password)
+		logging.info(fname)
 		if not fname:
 			return render_template("error.html",message="Please provide username")
 		elif not email:
@@ -63,7 +67,6 @@ def register():
 @app.route("/admin",methods=["GET"])
 def admin():
 	allusers = User.query.all()
-	for user in allusers:
-		print(user.fname+" "+user.password+" "+str(user.timestamp))
+	logging.info(allusers)
 	return render_template("admin.html",allusers=allusers)
 
