@@ -17,7 +17,7 @@
         <div class="col-sm-3">
         </div>
         <div class="col-sm-6">
-          <form action="/register" method="POST">
+          <form action="" method="POST">
             <div class="form-group">
               <label for="user">First Name</label>
               <input type="text" class="form-control" id="user" name="user" placeholder="Enter Name Without Spaces">
@@ -31,7 +31,11 @@
               <label for="password">Password</label>
               <input type="password" class="form-control" name="password" id="password" placeholder="Password">
             </div>
-            <input type="submit" class="btn btn-primary" name="submit">
+            <input class="btn btn-primary" type="submit" formaction="/register" name="action" value="Register">
+            <input  class="btn btn-primary" type="submit" formaction="/auth" name="action" value="Login">
+            
+            <!-- <a href="{{url_for('auth')}}"><input type="submit" class="btn btn-primary"></a> -->
+            <!-- <input type="submit" class="btn btn-primary" name="login"> -->
           </form>
         </div>
         <div class="col-sm-3">
